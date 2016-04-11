@@ -1,52 +1,60 @@
-"set ts=4
-"set sw=4
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Plugins
+Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plugin 'whatyouhide/vim-gotham'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+" Basic settings
 set nu
 set nows
 set ruler
+set ai
+set si
 set backspace=indent,eol,start
 
-set ts=2
-set sw=2
+" Converting tabs to spaces
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 
-" Applying syntax color
-syntax on
-set hlsearch
-"filetype plugin on
+" Noexpandtab for Makefile
+autocmd FileType make setlocal noexpandtab
 
+" Applying syntax color
+set t_Co=256
+set t_ut=
+syntax on
+color gotham256
+set hlsearch
+
+" Open a file at the same line as closed
 au BufReadPost *
 \ if line("'\"") > 0 && line("'\"") <= line("$") |
 \ exe "norm g`\"" |
 \ endif
-
-
-"syntax on
-"sy enable
-"set ts=4
-"set sw=4
-set ai
-"set hls
-"set ru
-"set magic
-"set nuw=5
-"set ls=2
-"set esckeys
-"set history=1000
-"set backspace=indent,eol,start
-"set iskeyword-=_
-"set t_Co=256
-"set t_ut=
-"set tags+=/usr/include/tags
-""set undofile
-""set undodir=~/.vim/undo
-"filetype on
-"filetype plugin on
-"colorscheme peachpuff
-"hi CursorLine cterm=bold term=none ctermbg=235
-"hi Visual cterm=bold ctermbg=darkgrey
-"hi Search term=reverse ctermbg=lightblue ctermfg=black
-"" disable auto comment
-"autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-"
-"" disable following two lines when you use 'black on white' scheme
-""set cursorline
