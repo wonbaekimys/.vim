@@ -11,11 +11,12 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
-" Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
-Plugin 'whatyouhide/vim-gotham'
-" Plugin 'itchyny/lightline.vim'
+"Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+"Plugin 'whatyouhide/vim-gotham'
+"Plugin 'itchyny/lightline.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-sol'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -55,9 +56,8 @@ autocmd FileType make setlocal noexpandtab
 set t_Co=256
 set t_ut=
 syntax on
-color gotham
+color sol-term
 set hlsearch
-"let g:lightline = { 'colorscheme': 'gotham' }
 
 " Open a file at the same line as closed
 au BufReadPost *
@@ -67,11 +67,11 @@ au BufReadPost *
 
 " Airline
 set laststatus=2
-" let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 " if !exists('g:airline_symbols')
 "   let g:airline_symbols = {}
 " endif
 " let g:airline_symbols.space = "\ua0"
 let g:airline#extensions#tabline#enabled = 1
 " let g:airline#extensions#tabline#show_buffers = 0
-let g:airline_theme = 'gotham'
+let g:airline_theme = 'sol'
