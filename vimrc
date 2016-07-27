@@ -55,9 +55,9 @@ autocmd FileType make setlocal noexpandtab
 set t_Co=256
 set t_ut=
 syntax on
-color gotham
+color gotham256
 set hlsearch
-"let g:lightline = { 'colorscheme': 'gotham' }
+"let g:lightline = { 'colorscheme': 'gotham256' }
 
 " Open a file at the same line as closed
 au BufReadPost *
