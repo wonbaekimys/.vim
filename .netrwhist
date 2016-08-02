@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/wb/eclipse/EclipseMR/src'
-let g:netrw_dirhist_2='/home/wb/eclipse/EclipseMR/src/fs'
-let g:netrw_dirhist_3='/home/wb/eclipse/EclipseMR/src'
-let g:netrw_dirhist_4='/home/wb/eclipse/EclipseMR/src/messages'
-let g:netrw_dirhist_5='/home/wb'
-let g:netrw_dirhist_6='/home'

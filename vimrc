@@ -11,12 +11,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
-"Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
-"Plugin 'whatyouhide/vim-gotham'
-"Plugin 'itchyny/lightline.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-sol'
+Plugin 'notpratheek/vim-sol'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
