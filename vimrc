@@ -30,11 +30,13 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-augroup ColorcolumnOnlyInInsertMode
-  autocmd!
-  autocmd InsertEnter * setlocal colorcolumn=80
-  autocmd InsertLeave * setlocal colorcolumn=0
-augroup END
+if v:version > 730
+  augroup ColorcolumnOnlyInInsertMode
+    autocmd!
+    autocmd InsertEnter * setlocal colorcolumn=80
+    autocmd InsertLeave * setlocal colorcolumn=0
+  augroup END
+endif
 
 " Basic settings
 set nu
